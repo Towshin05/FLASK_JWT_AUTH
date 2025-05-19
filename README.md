@@ -38,7 +38,7 @@ The architecture includes three main Docker containers:
 - `PostgreSQL`: Stores users and JWT-related token data.
 - `pgAdmin`: A web-based UI to manage PostgreSQL.
 
-![Project Architecture](docs/project-architecture.png)
+![Project Architecture](images/poridhi.drawio.svg)
 
 ---
 
