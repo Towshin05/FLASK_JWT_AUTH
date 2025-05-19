@@ -42,7 +42,7 @@ The architecture includes three main Docker containers:
 
 ---
 
-## Project Structure
+
 ## 📁 Project Structure
 
 ![Project Structure](images/pic.png)
@@ -70,8 +70,9 @@ The architecture includes three main Docker containers:
 
 
 git clone https://github.com/Towshin05/FLASK_JWT_AUTH.git
-cd FLASK_JWT_AUTH
+- cd FLASK_JWT_AUTH
  
+
 ## Run with Docker Compose
  docker-compose up --build
 
@@ -83,15 +84,15 @@ cd FLASK_JWT_AUTH
 | pgAdmin    | `http://localhost:5050` | DB GUI                    |
  pgAdmin Login:
 
- Email: admin@example.com
- Pass: poridhi25
+ - Email: admin@example.com
+ - Pass: poridhi25
 ## Create a .env file with the following variables:
- Flask_APP=run.py
- FLASK_ENV=development
- JWT_SECRET_KEY=your_secret_key
- POSTGRES_USER=postgres
- POSTGRES_PASSWORD=yourpassword
- POSTGRES_DB=flask_jwt_auth
+ - Flask_APP=run.py
+ - FLASK_ENV=development
+ - JWT_SECRET_KEY=your_secret_key
+ - POSTGRES_USER=postgres
+ - POSTGRES_PASSWORD=yourpassword
+ - POSTGRES_DB=flask_jwt_auth
 
 
 ## Tech Stack
@@ -109,7 +110,7 @@ cd FLASK_JWT_AUTH
 | POST   | `/logout`    | Revoke access and refresh tokens |
 | GET    | `/protected` | Protected route (JWT required)   |
 
-## Development
+
 ## Running the Application
 # Start all services
 docker-compose up -d
@@ -124,23 +125,23 @@ CTRL+C
 
 ## 🛠  Troubleshooting
 
-## Database Connection Issues:
+# Database Connection Issues:
 
-Ensure PostgreSQL is running: docker-compose ps
-Check the check_pg_connection.sh script is working correctly
-Check database logs: docker-compose logs db
-
-
-## 🔑 JWT Token Issues:
-
-Verify JWT_SECRET_KEY is set correctly in .env
-Check token expiration settings
+- Ensure PostgreSQL is running: docker-compose ps
+- Check the check_pg_connection.sh script is working correctly
+- Check database logs: docker-compose logs db
 
 
-## 🐳 Docker Issues:
+# 🔑 JWT Token Issues:
 
-Rebuild containers: docker-compose up --build
-Clean Docker system: docker system prune
+- Verify JWT_SECRET_KEY is set correctly in .env
+- Check token expiration settings
+
+
+# 🐳 Docker Issues:
+
+- Rebuild containers: docker-compose up --build
+- Clean Docker system: docker system prune
 
 # 📃 License
 This project is licensed under the MIT License.
@@ -148,4 +149,4 @@ This project is licensed under the MIT License.
 # 🤝 Contributing
 Contributions are welcome!
 Feel free to fork the repository and open a pull request.
-Contributed by: Towshin05
+- Contributed by: Towshin05
