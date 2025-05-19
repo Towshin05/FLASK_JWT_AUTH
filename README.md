@@ -43,26 +43,10 @@ The architecture includes three main Docker containers:
 ---
 
 ## Project Structure
-DOCKER_FLASK/
-├── _pycache_/
-├── app/
-│   ├── _pycache_/
-│   ├── routes/
-│   │   ├── _pycache_/
-│   │   ├── __init__.py
-│   │   ├── auth.py
-│   │   ├── config.py
-│   │   └── user.py
-│   ├── __init__.py
-│   ├── models.py
-│   └── utils.py
-├── migrations/
-├── .env
-├── docker-compose.yml
-├── Dockerfile
-├── README.md
-├── requirements.txt
-└── run.py
+## 📁 Project Structure
+
+![Project Structure](images/pic.png)
+
 
 ## ⚙️ Configuration Files
 - app/routes/config.py: Contains application configuration settings
@@ -84,7 +68,7 @@ DOCKER_FLASK/
 - Docker Compose
 ## Clone the Repository
 
-```bash
+
 git clone https://github.com/Towshin05/FLASK_JWT_AUTH.git
 cd FLASK_JWT_AUTH
  
@@ -92,7 +76,7 @@ cd FLASK_JWT_AUTH
  docker-compose up --build
 
  ## Access the service
- | Service    | URL                     | Description               |
+| Service    | URL                     | Description               |
 | ---------- | ----------------------- | ------------------------- |
 | Flask App  | `http://localhost:5001` | API Endpoints             |
 | PostgreSQL | `localhost:5432`        | DB Server (internal only) |
@@ -164,3 +148,4 @@ This project is licensed under the MIT License.
 # 🤝 Contributing
 Contributions are welcome!
 Feel free to fork the repository and open a pull request.
+Contributed by: Towshin05
