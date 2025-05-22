@@ -1,7 +1,7 @@
 from app import db, bcrypt
 from datetime import datetime
 import uuid
-
+from sqlalchemy import Text
 class User(db.Model):
     __tablename__ = 'users'
 
@@ -37,7 +37,7 @@ class RefreshToken(db.Model):
 
     id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
     user_id = db.Column(db.String(36), db.ForeignKey('users.id'), nullable=False)
-    token = db.Column(db.String(255), unique=True, nullable=False)
+    token = db.Column(db.Text, nullable=False, unique=True)
     expires_at = db.Column(db.DateTime, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     
@@ -63,7 +63,7 @@ class PasswordResetToken(db.Model):
 
     id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
     user_id = db.Column(db.String(36), db.ForeignKey('users.id'), nullable=False)
-    token = db.Column(db.String(255), unique=True, nullable=False)
+    token = db.Column(db.Text, unique=True, nullable=False)
     expires_at = db.Column(db.DateTime, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     is_used = db.Column(db.Boolean, default=False)
