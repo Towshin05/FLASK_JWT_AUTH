@@ -79,7 +79,7 @@ git clone https://github.com/Towshin05/FLASK_JWT_AUTH.git
  ## Access the service
 | Service    | URL                     | Description               |
 | ---------- | ----------------------- | ------------------------- |
-| Flask App  | `http://localhost:5001` | API Endpoints             |
+| Flask App  | `http://localhost:5000` | API Endpoints             |
 | PostgreSQL | `localhost:5432`        | DB Server (internal only) |
 | pgAdmin    | `http://localhost:5050` | DB GUI                    |
  pgAdmin Login:
@@ -109,6 +109,15 @@ git clone https://github.com/Towshin05/FLASK_JWT_AUTH.git
 | POST   | `/refresh`   | Get a new access token           |
 | POST   | `/logout`    | Revoke access and refresh tokens |
 | GET    | `/protected` | Protected route (JWT required)   |
+
+## 🧪 API Testing
+You can test the API endpoints using the test_api.sh script included in the project.
+🔄 Logout Endpoint Example (from test_api.sh)
+curl -X POST http://127.0.0.1:5000/api/logout \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <your_access_token_here>"
+
+  - bash test_api.sh (run in terminal)
 
 
 ## Running the Application
