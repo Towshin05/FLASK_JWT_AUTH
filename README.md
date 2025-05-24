@@ -120,12 +120,12 @@ curl -X POST http://127.0.0.1:5000/api/logout \
   - bash test_api.sh (run in terminal)
 ## Port Mapping
 - run ifconfig in terminal
-![](images/port.png)
+![](images/ip.png)
 
 - Put the ip address and port (e.g 5000) in the load balancer
 - You will get 3 different ports for 3 containers
 
-![](images/ip.png)
+![](images/port.png)
 
 ## Running the Application
 # Start all services
