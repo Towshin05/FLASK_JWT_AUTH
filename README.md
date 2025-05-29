@@ -15,6 +15,7 @@ A secure Flask application that implements JWT-based user authentication and aut
 - [📦 Tech Stack](#-tech-stack)
 - [📁 Directory Structure](#-directory-structure)
 - [🔐 API Endpoints](#-api-endpoints)
+- [🔌 Port Mapping](#-port-mapping)
 - [📃 License](#-license)
 
 ---
@@ -38,7 +39,7 @@ The architecture includes three main Docker containers:
 - `PostgreSQL`: Stores users and JWT-related token data.
 - `pgAdmin`: A web-based UI to manage PostgreSQL.
 
-![Project Architecture](images/poridhi.drawio.svg)
+![Project Architecture](images/poridhi.png)
 
 ---
 
@@ -118,14 +119,26 @@ curl -X POST http://127.0.0.1:5000/api/logout \
   -H "Authorization: Bearer <your_access_token_here>"
 
   - bash test_api.sh (run in terminal)
-## Port Mapping
-- run ifconfig in terminal
-![](images/ip.png)
+## 🔌 Port Mapping Guide
+- Port Mapping (also known as port forwarding) is the process of forwarding network packets from one network address and port number combination to another. It's commonly used to allow external devices to access services on private networks.
 
-- Put the ip address and port (e.g 5000) in the load balancer
-- You will get 3 different ports for 3 containers
+- In a load-balanced environment, port mapping helps distribute traffic efficiently across multiple instances of an application or service.
 
-![](images/port.png)
+- Get the ip private address.
+ ifconfig
+ ![](images/ifconfig.drawio.png)
+
+ - Create load balancer
+ ![](images/load.drawio.png)
+
+ - Getting the ports
+ ![](images/port.png)
+## Port mapping example
+| Load Balancer Port | Backend IP  | Backend Port | Protocol |
+| ------------------ | ----------- | ------------ | -------- |
+| 80 (HTTP)          | 192.168.1.2 | 8080         | TCP      |
+| 80 (HTTP)          | 192.168.1.3 | 8080         | TCP      |
+| 443 (HTTPS)        | 192.168.1.4 | 8443         | TCP      |
 
 ## Running the Application
 # Start all services
