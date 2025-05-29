@@ -39,7 +39,7 @@ The architecture includes three main Docker containers:
 - `PostgreSQL`: Stores users and JWT-related token data.
 - `pgAdmin`: A web-based UI to manage PostgreSQL.
 
-![Project Architecture](images/poridhi.png)
+![Project Architecture](images/poridhi.drawio%20(1).svg)
 
 ---
 
@@ -113,10 +113,10 @@ git clone https://github.com/Towshin05/FLASK_JWT_AUTH.git
 
 ## 🧪 API Testing
 You can test the API endpoints using the test_api.sh script included in the project.
-🔄 Logout Endpoint Example (from test_api.sh)
+- 🔄 Logout Endpoint Example (from test_api.sh)
 curl -X POST http://127.0.0.1:5000/api/logout \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <your_access_token_here>"
+ -  -H "Content-Type: application/json" \
+ -  -H "Authorization: Bearer <your_access_token_here>"
 
   - bash test_api.sh (run in terminal)
 ## 🔌 Port Mapping Guide
@@ -126,10 +126,10 @@ curl -X POST http://127.0.0.1:5000/api/logout \
 
 - Get the ip private address.
  ifconfig
- ![](images/ifconfig.drawio.png)
+ - ![](images/ifconfig.drawio.png)
 
  - Create load balancer
- ![](images/load.drawio.png)
+ - ![](images/load.drawio.png)
 
  - Getting the ports
  ![](images/port.png)
