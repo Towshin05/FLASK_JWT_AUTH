@@ -62,7 +62,7 @@ The architecture includes three main Docker containers:
 - revoked_tokens
 - reset_tokens
 
-## 🚀 Getting Started
+# 🚀 Getting Started
 ## Prerequisites
 
 - Docker 
@@ -125,11 +125,11 @@ curl -X POST http://127.0.0.1:5000/api/logout \
 - In a load-balanced environment, port mapping helps distribute traffic efficiently across multiple instances of an application or service.
 
 - Get the ip private address.
- ifconfig
- - ![](images/ifconfig.drawio.png)
+- ifconfig
+ ![](images/ifconfig.drawio.png)
 
  - Create load balancer
- - ![](images/load.drawio.png)
+ ![](images/load.drawio.png)
 
  - Getting the ports
  ![](images/port.png)
@@ -140,21 +140,21 @@ curl -X POST http://127.0.0.1:5000/api/logout \
 | 80 (HTTP)          | 192.168.1.3 | 8080         | TCP      |
 | 443 (HTTPS)        | 192.168.1.4 | 8443         | TCP      |
 
-## Running the Application
-# Start all services
+# Running the Application
+## Start all services
 docker-compose up -d
 
-# View logs
+## View logs
 docker-compose logs -f app
 
-# Stop all services
+## Stop all services
 docker-compose down
-# Stop the running terminal 
+## Stop the running terminal 
 CTRL+C
 
-## 🛠  Troubleshooting
+# 🛠  Troubleshooting
 
-# Database Connection Issues:
+## Database Connection Issues:
 
 - Ensure PostgreSQL is running: docker-compose ps
 - Check the check_pg_connection.sh script is working correctly
