@@ -126,13 +126,13 @@ curl -X POST http://127.0.0.1:5000/api/logout \
 
 📍 Get the  private ip address.
 - ifconfig
- <div align="center"> <img src="images/ifconfig.drawio.png" alt="ifconfig output" width="600"/> </div>
+ <div align="center"> <img src="images/ifconfig.drawio.png" alt="ifconfig output" width="500"/> </div>
 
 ⚙️ Create load balancer
- <div align="center"> <img src="images/load.drawio.png" alt="load balancer" width="600"/> </div>
+ <div align="center"> <img src="images/load.drawio.png" alt="load balancer" width="500"/> </div>
 
 🔍 Getting the Ports
-<div align="center"> <img src="images/port.png" alt="port information" width="500"/> </div>
+<div align="center"> <img src="images/port.png" alt="port information" width="600"/> </div>
 
 ## Port mapping example
 | Load Balancer Port | Backend IP  | Backend Port | Protocol |
