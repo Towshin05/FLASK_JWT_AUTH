@@ -124,15 +124,16 @@ curl -X POST http://127.0.0.1:5000/api/logout \
 
 - In a load-balanced environment, port mapping helps distribute traffic efficiently across multiple instances of an application or service.
 
-- Get the ip private address.
+📍 Get the  private ip address.
 - ifconfig
- ![](images/ifconfig.drawio.png)
+ <div align="center"> <img src="images/ifconfig.drawio.png" alt="ifconfig output" width="600"/> </div>
 
- - Create load balancer
- ![](images/load.drawio.png)
+⚙️ Create load balancer
+ <div align="center"> <img src="images/load.drawio.png" alt="load balancer" width="600"/> </div>
 
- - Getting the ports
- ![](images/port.png)
+🔍 Getting the Ports
+<div align="center"> <img src="images/port.png" alt="port information" width="500"/> </div>
+
 ## Port mapping example
 | Load Balancer Port | Backend IP  | Backend Port | Protocol |
 | ------------------ | ----------- | ------------ | -------- |
