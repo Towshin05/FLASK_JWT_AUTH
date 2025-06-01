@@ -104,6 +104,8 @@ The architecture includes three main Docker containers:
    docker-compose exec app python init-schema.py
    ```
 5. **Access the service**
+
+
 | Service    | URL                     | Description               |
 | ---------- | ----------------------- | ------------------------- |
 | Flask App  | `http://localhost:5000` | API Endpoints             |
@@ -117,7 +119,7 @@ The architecture includes three main Docker containers:
 ### Running the Application
 #### Start all services
 ```bash 
-docker-compose up -d
+docker-compose up --build
 
 ## View logs
 docker-compose logs -f app
@@ -204,7 +206,7 @@ curl -X POST http://127.0.0.1:5000/api/reset-password \
 All commands are written in test_api.sh file 
 ```bash
 
-bash test_api.sh (run in terminal)
+bash test_api.sh 
 ```
 
 
@@ -263,18 +265,18 @@ In a load-balanced environment, port mapping helps distribute traffic efficientl
 - Check database logs: docker-compose logs db
 
 
-### JWT Token Issues:
+#### JWT Token Issues:
 
 - Verify JWT_SECRET_KEY is set correctly in .env
 - Check token expiration settings
 
 
-### Docker Issues:
+#### Docker Issues:
 
 - Rebuild containers: docker-compose up --build
 - Clean Docker system: docker system prune
 
-### License
+#### License
 This project is licensed under the MIT License.
 
 ### Contributing
