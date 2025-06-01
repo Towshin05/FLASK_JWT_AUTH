@@ -85,8 +85,8 @@ The architecture includes three main Docker containers:
    POSTGRES_USER=user
    POSTGRES_PASSWORD=password
    POSTGRES_DB=auth_db
+   ```
    For pgAdmin, create a `.env.pgAdmin` file:
-
    ```properties
    PGADMIN_DEFAULT_EMAIL=admin@admin.com
    PGADMIN_DEFAULT_PASSWORD=poridhi25
@@ -103,7 +103,7 @@ The architecture includes three main Docker containers:
    ```bash
    docker-compose exec app python init-schema.py
    ```
-5. **Access the service**:
+5. **Access the service**
 | Service    | URL                     | Description               |
 | ---------- | ----------------------- | ------------------------- |
 | Flask App  | `http://localhost:5000` | API Endpoints             |
@@ -119,10 +119,10 @@ The architecture includes three main Docker containers:
 ```bash 
 docker-compose up -d
 
-#### View logs
+## View logs
 docker-compose logs -f app
 
-#### Stop all services
+## Stop all services
 docker-compose down
 ## Stop the running terminal 
 CTRL+C
@@ -143,9 +143,6 @@ CTRL+C
 
 
 
-
-
-
 ### API Endpoints
 | Method | Endpoint     | Description                      |
 | ------ | ------------ | -------------------------------- |
@@ -158,7 +155,7 @@ CTRL+C
 ##  API Testing
 You can test the API endpoints using the test_api.sh script included in the project.
 
-
+1. **Register**
 ```bash
 curl -X POST http://127.0.0.1:5000/api/register \
 -H "Content-Type: application/json" \
@@ -167,28 +164,37 @@ curl -X POST http://127.0.0.1:5000/api/register \
   "email": "testuser@example.com",
   "password": "testpassword"
 }'
-
-   
-
+```
+2. **Login** 
+```bash
 curl -X POST http://127.0.0.1:5000/api/login \
 -H "Content-Type: application/json" \
 -d '{
   "email": "testuser@example.com",
   "password": "testpassword"
 }'
+```
+3. **Logout**
+```bash
 curl -X POST http://127.0.0.1:5000/api/logout \
 H "Content-Type: application/json" \
 H "Authorization: Bearer <your_access_token_here>"
-
+```
+4. **Refresh**
+```bash
 curl -X POST http://127.0.0.1:5000/api/refresh \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer <your_refresh_token>"
+```
+5. **LogoutAll**
+```bash
 
-
-curl -X POST http://127.0.0.1:5000/api/logout \
+curl -X POST http://127.0.0.1:5000/api/logout-all \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer <your_access_token>"
-
+```
+6. **Password-Reset** 
+```bash
 curl -X POST http://127.0.0.1:5000/api/reset-password \
 -H "Content-Type: application/json" \
 -d '{
