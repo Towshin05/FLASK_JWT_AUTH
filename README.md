@@ -258,6 +258,9 @@ In a load-balanced environment, port mapping helps distribute traffic efficientl
 
 ## Deploying Flask App on AWS EC2
 
+**Architecture**
+![Architecture](images\aws.drawio.svg)
+
 1. **Launch EC2 Instance**
 - Go to AWS EC2 Console
 - Launch an Amazon Linux 2 or Ubuntu instance
@@ -270,7 +273,7 @@ In a load-balanced environment, port mapping helps distribute traffic efficientl
 ```bash
 ssh -i your-key.pem ec2-user@your-ec2-public-ip
 ```
-3. **nstall Git, Docker & Docker Compose**
+3. **Install Git, Docker & Docker Compose**
 ```bash
 sudo yum update -y              # For Amazon Linux 2
 sudo yum install git -y
@@ -313,7 +316,7 @@ docker compose up -d
 
 <div align="center"> <img src="images/logout2.png" alt="port information" width="600"/> </div>
 
-###  Troubleshooting
+##  Troubleshooting
 #### Database Connection Issues:
 
 - Ensure PostgreSQL is running: docker-compose ps
