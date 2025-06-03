@@ -256,7 +256,7 @@ In a load-balanced environment, port mapping helps distribute traffic efficientl
 | 80 (HTTP)          | 192.168.1.3 | 8080         | TCP      |
 | 443 (HTTPS)        | 192.168.1.4 | 8443         | TCP      |
 
-### Deploying Flask App on AWS EC2
+## Deploying Flask App on AWS EC2
 
 1. **Launch EC2 Instance**
 - Go to AWS EC2 Console
@@ -301,10 +301,19 @@ docker compose up -d
 ```
 ### Test on Postman
 
-#### POST Method  
+#### POST Method  http://54.255.105.135:5000/api/register
+
+<div align="center"> <img src="images/register1.png" alt="port information" width="600"/> </div>
+
+#### POST Method  http://54.255.105.135:5000/api/login
+
+<div align="center"> <img src="images/login2.png" alt="port information" width="600"/> </div>
+
+#### POST Method  http://54.255.105.135:5000/api/logout
+
+<div align="center"> <img src="images/logout2.png" alt="port information" width="600"/> </div>
 
 ###  Troubleshooting
-
 #### Database Connection Issues:
 
 - Ensure PostgreSQL is running: docker-compose ps
@@ -323,7 +332,7 @@ docker compose up -d
 - Rebuild containers: docker-compose up --build
 - Clean Docker system: docker system prune
 
-#### License
+### License
 This project is licensed under the MIT License.
 
 ### Contributing
