@@ -256,6 +256,53 @@ In a load-balanced environment, port mapping helps distribute traffic efficientl
 | 80 (HTTP)          | 192.168.1.3 | 8080         | TCP      |
 | 443 (HTTPS)        | 192.168.1.4 | 8443         | TCP      |
 
+### Deploying Flask App on AWS EC2
+
+1. **Launch EC2 Instance**
+- Go to AWS EC2 Console
+- Launch an Amazon Linux 2 or Ubuntu instance
+- Select key pair (or create new)
+- In Security Group, open inbound rules:
+       - 22 (SSH)
+       - Custom TCP
+
+2. **SSH into EC2 Instance**
+```bash
+ssh -i your-key.pem ec2-user@your-ec2-public-ip
+```
+3. **nstall Git, Docker & Docker Compose**
+```bash
+sudo yum update -y              # For Amazon Linux 2
+sudo yum install git -y
+
+# Install Docker
+sudo yum install docker -y
+sudo service docker start
+sudo systemctl enable docker
+sudo usermod -aG docker ec2-user
+newgrp docker
+
+# Install Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+```
+
+4. **Sends the local folder**
+```bash
+scp -i "D:/folder_name/key-pair.pem" -r D:/folder_name ec2-user@public_ip:~/
+
+```
+
+5. **Continue with**
+```bash
+cd docker_flask
+docker compose up -d
+```
+### Test on Postman
+
+#### POST Method  
+
 ###  Troubleshooting
 
 #### Database Connection Issues:
